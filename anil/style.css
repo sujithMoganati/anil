@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: roboto;
+}
+body {
+    background-color: rgb(180, 255, 254);
+    text-align: center;
+}
+.home-block {
+    display: block;
+    background-color: rgb(255, 171, 68);
+    display: flex;
+    flex-direction: row;
+    padding: 10px 5px;
+}
+table {
+    width: 50%;
+    margin-left: auto;
+}
+.home-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+}
+.home-container img {
+    width: 50%;
+    flex: 0 0 auto;
+    animation: scrollImages 20s linear infinite;
+}
+@keyframes scrollImages {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% * 6));
+    }
+}
+.packages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+}
+.packages-container {
+    font-family: Roboto;
+    width: 97%;
+    margin: 20px auto;
+    background-image: radial-gradient(circle at 65% 15%, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.01) 3%, transparent 3%, transparent 100%), radial-gradient(circle at 40% 33%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 3%, transparent 3%, transparent 100%), radial-gradient(circle at 9% 92%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 3%, transparent 3%, transparent 100%), radial-gradient(circle at 84% 0%, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.01) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 97% 94%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 13% 95%, rgba(252, 247, 247, 0.02) 0%, rgba(252, 247, 247, 0.02) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 77% 8%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 58% 0%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 76% 71%, rgba(252, 247, 247, 0.02) 0%, rgba(252, 247, 247, 0.02) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 88% 74%, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.01) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 74% 99%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 16% 56%, rgba(252, 247, 247, 0.02) 0%, rgba(252, 247, 247, 0.02) 7%, transparent 7%, transparent 100%), radial-gradient(circle at 25% 4%, rgba(252, 247, 247, 0.02) 0%, rgba(252, 247, 247, 0.02) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 54% 83%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 70% 60%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 23% 73%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 63% 81%, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.01) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 56% 58%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 64% 68%, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 5%, transparent 5%, transparent 100%), radial-gradient(circle at 52% 48%, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.01) 5%, transparent 5%, transparent 100%), linear-gradient(90deg, rgba(51, 81, 154, 0.86), rgba(148, 25, 42, 0.96));
+    border-radius: 20px;
+    padding: 20px;
+}
+.packages-container h1 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    text-align: start;
+    color: #ffffff;
+    margin-bottom: 3%;
+}
+.package {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 320px;
+    max-width: 250px;
+    min-width: 200px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.package button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: transparent;
+    height: 50px;
+    border: none;
+    color: #ffffff;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+}
+.package img {
+    width: 100%;
+    border-radius: 5px;
+}
+.package:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.package:hover button {
+    opacity: 1;
+}
+.package-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 0;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.package:hover .package-title {
+    opacity: 1;
+}
+.package h2 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+/* flight*/
+/* .flight-container {
+
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    text-align: justify;
+}
+.flight-container img {
+    height: 100%;
+    width: 40%;
+    border-radius: 15px;
+}
+.flight-container p {
+    padding-right: 3%;
+}
+.flight-container2 {
+    display: flex;
+    margin: 1%;
+    padding: 3%;
+    background-image: radial-gradient(circle at 67% 83%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 1%,transparent 1%, transparent 5%,transparent 5%, transparent 100%),radial-gradient(circle at 24% 80%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 27%,transparent 27%, transparent 63%,transparent 63%, transparent 100%),radial-gradient(circle at 23% 5%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 26%,transparent 26%, transparent 82%,transparent 82%, transparent 100%),radial-gradient(circle at 21% 11%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 35%,transparent 35%, transparent 45%,transparent 45%, transparent 100%),radial-gradient(circle at 10% 11%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 21%,transparent 21%, transparent 81%,transparent 81%, transparent 100%),radial-gradient(circle at 19% 61%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 20%,transparent 20%, transparent 61%,transparent 61%, transparent 100%),radial-gradient(circle at 13% 77%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 63%,transparent 63%, transparent 72%,transparent 72%, transparent 100%),radial-gradient(circle at 30% 93%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 33%,transparent 33%, transparent 82%,transparent 82%, transparent 100%),linear-gradient(270deg, rgb(22, 176, 207),rgb(50,5,255));
+    color: #ffffff;
+    border-radius: 10px;
+}
+.flight-btn {
+    text-align: left;
+    padding: 2% 3%;
+    border: none;
+    color: #fff;
+    border-radius: 7px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+}
+
+.flight-btn {
+    background: rgb(255, 115, 0);
+    box-shadow: 0 0 25px rgb(255, 115, 0);
+    text-align: start;
+}
+
+.flight-btn:hover {
+    box-shadow: 0 0 5px rgb(255, 115, 0), 0 0 25px rgb(255, 115, 0), 0 0 50px rgb(255, 115, 0), 0 0 100px rgb(255, 115, 0);
+} */
+.flight-container{
+    background-image: radial-gradient(circle at 67% 83%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 1%,transparent 1%, transparent 5%,transparent 5%, transparent 100%),radial-gradient(circle at 24% 80%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 27%,transparent 27%, transparent 63%,transparent 63%, transparent 100%),radial-gradient(circle at 23% 5%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 26%,transparent 26%, transparent 82%,transparent 82%, transparent 100%),radial-gradient(circle at 21% 11%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 35%,transparent 35%, transparent 45%,transparent 45%, transparent 100%),radial-gradient(circle at 10% 11%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 21%,transparent 21%, transparent 81%,transparent 81%, transparent 100%),radial-gradient(circle at 19% 61%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 20%,transparent 20%, transparent 61%,transparent 61%, transparent 100%),radial-gradient(circle at 13% 77%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 63%,transparent 63%, transparent 72%,transparent 72%, transparent 100%),radial-gradient(circle at 30% 93%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 33%,transparent 33%, transparent 82%,transparent 82%, transparent 100%),linear-gradient(270deg, rgb(22, 176, 207),rgb(50,5,255));
+    display: flex;
+    flex-direction: row;
+    margin: 2%;
+    border-radius: 10px;
+    text-align: left;
+}
+.flight-container div{
+    margin: 10px;
+}
+.flight-container img{
+    width: 40%;
+    border-radius: 10px;
+}
+.flight-btn {
+    text-align: left;
+    padding: 2% 3%;
+    border: none;
+    color: #fff;
+    border-radius: 7px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+}
+
+.flight-btn {
+    background: rgb(255, 115, 0);
+    box-shadow: 0 0 25px rgb(255, 115, 0);
+    text-align: start;
+}
+
+.flight-btn:hover {
+    box-shadow: 0 0 5px rgb(255, 115, 0), 0 0 25px rgb(255, 115, 0), 0 0 50px rgb(255, 115, 0), 0 0 100px rgb(255, 115, 0);
+}
